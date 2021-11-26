@@ -46,4 +46,8 @@ public class AccountsService {
         initialBalance += amount;
         return Optional.of(accountsRepository.updateBalance(accountNumber, initialBalance));
     }
+
+    public Optional<Accounts> getByNumber(int accountNumber) {
+        return Optional.of(accountsRepository.getAccountByNumber(accountNumber));
+    }
 }

@@ -14,7 +14,7 @@ public class TransactionsEntity {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "account_id", insertable = false, updatable = false)
+    @JoinColumn(name = "account_id")
     private AccountsEntity account;
 
     private int amount;

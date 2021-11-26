@@ -11,4 +11,5 @@ public class Transactions {
     private int amount;
     private String operation;
     private LocalDate date;
+    private Accounts account;
 }
