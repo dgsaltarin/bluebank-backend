@@ -36,9 +36,14 @@ public class AccountsService {
                 createAccount(account));
     }
 
-    public Optional<Double> consultBalance(int accountNumber) {
+    public Optional<Integer> consultBalance(int accountNumber) {
         Accounts account = accountsRepository.consultBalance(accountNumber);
         return Optional.of(account.getBalance());
     }
 
+    public Optional<Accounts> updateBalance(int accountNumber, int amount) {
+        int initialBalance = consultBalance(accountNumber).get();
+        initialBalance += amount;
+        return Optional.of(accountsRepository.updateBalance(accountNumber, initialBalance));
+    }
 }

@@ -28,7 +28,7 @@ public class AccountController {
     }
 
     @GetMapping("/{accountNumber}")
-    public ResponseEntity<Double> seeBalance(@PathVariable("accountNumber") int accountNumber) {
+    public ResponseEntity<Integer> seeBalance(@PathVariable("accountNumber") int accountNumber) {
         return accountsService.consultBalance(accountNumber).map(balance -> new ResponseEntity<>(balance, HttpStatus.OK))
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }

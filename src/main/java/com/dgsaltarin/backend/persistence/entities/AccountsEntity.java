@@ -15,7 +15,7 @@ public class AccountsEntity {
     private Long id;
 
     @Column(name = "balance")
-    private double balance;
+    private int balance;
 
     @OneToOne
     @JoinColumn(name = "user_id")
@@ -35,11 +35,11 @@ public class AccountsEntity {
         return id;
     }
 
-    public double getBalance() {
+    public int getBalance() {
         return balance;
     }
 
-    public void setBalance(double balance) {
+    public void setBalance(int balance) {
         this.balance = balance;
     }
 

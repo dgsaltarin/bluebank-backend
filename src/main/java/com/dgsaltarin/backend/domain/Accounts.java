@@ -6,7 +6,7 @@ import lombok.Data;
 public class Accounts {
 
     private Long id;
-    private double balance;
+    private int balance;
     private Users user;
     private int number;
 }

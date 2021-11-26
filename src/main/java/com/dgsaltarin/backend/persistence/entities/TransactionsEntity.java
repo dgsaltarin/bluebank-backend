@@ -17,7 +17,7 @@ public class TransactionsEntity {
     @JoinColumn(name = "account_id", insertable = false, updatable = false)
     private AccountsEntity account;
 
-    private double amount;
+    private int amount;
 
     private String operation;
 
@@ -39,11 +39,11 @@ public class TransactionsEntity {
         this.account = account;
     }
 
-    public double getAmount() {
+    public int getAmount() {
         return amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(int amount) {
         this.amount = amount;
     }
 

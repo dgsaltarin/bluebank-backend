@@ -6,5 +6,5 @@ import lombok.Data;
 public class CreateAccountRequest {
 
     private String userName;
-    private double initialBalance;
+    private int initialBalance;
 }

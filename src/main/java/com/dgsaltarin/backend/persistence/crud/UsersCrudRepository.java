@@ -4,4 +4,5 @@ import com.dgsaltarin.backend.persistence.entities.UsersEntity;
 import org.springframework.data.repository.CrudRepository;
 
 public interface UsersCrudRepository extends CrudRepository<UsersEntity, Integer> {
+
 }
