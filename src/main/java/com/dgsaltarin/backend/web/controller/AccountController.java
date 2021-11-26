@@ -2,7 +2,6 @@ package com.dgsaltarin.backend.web.controller;
 
 import com.dgsaltarin.backend.domain.Accounts;
 import com.dgsaltarin.backend.domain.dto.CreateAccountRequest;
-import com.dgsaltarin.backend.domain.dto.CreatedAccountResponse;
 import com.dgsaltarin.backend.domain.service.AccountsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "/account")
+@CrossOrigin(origins = "http://localhost:4200")
 public class AccountController {
 
     private AccountsService accountsService;
