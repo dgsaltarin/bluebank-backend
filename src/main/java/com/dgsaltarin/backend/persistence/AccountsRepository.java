@@ -26,7 +26,7 @@ public class AccountsRepository {
         return accountMapper.toAccount(accountsCrudRepository.findAccountsEntitiesByNumber(accountNumber));
     }
 
-    public Accounts updateBalance(int accountNumber, int amount) {
-        return accountMapper.toAccount(accountsCrudRepository.update(accountNumber, amount));
+    public int updateBalance(int accountNumber, int amount) {
+        return accountsCrudRepository.update(accountNumber, amount);
     }
 }

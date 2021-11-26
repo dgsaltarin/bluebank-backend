@@ -41,7 +41,7 @@ public class AccountsService {
         return Optional.of(account.getBalance());
     }
 
-    public Optional<Accounts> updateBalance(int accountNumber, int amount) {
+    public Optional<Integer> updateBalance(int accountNumber, int amount) {
         int initialBalance = consultBalance(accountNumber).get();
         initialBalance += amount;
         return Optional.of(accountsRepository.updateBalance(accountNumber, initialBalance));
