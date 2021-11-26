@@ -1,11 +1,9 @@
 package com.dgsaltarin.backend.persistence.entities;
 
-import com.dgsaltarin.backend.domain.Accounts;
-
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Accounts")
+@Table(name = "users")
 public class UsersEntity {
 
     @Id
@@ -14,7 +12,7 @@ public class UsersEntity {
 
     private String name;
 
-    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private AccountsEntity account;
 
     public void setId(Long id) {

@@ -7,23 +7,25 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "Accounts")
+@Table(name = "accounts")
 public class AccountsEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "balance")
     private double balance;
 
     @OneToOne
-    @JoinColumn(name = "user_id", updatable = false, nullable = false)
+    @JoinColumn(name = "user_id")
     private UsersEntity user;
 
     @OneToMany(mappedBy = "account")
     private List<TransactionsEntity> transactionsList;
 
-    private Long number;
+    @Column(name = "number")
+    private int number;
 
     public void setId(Long id) {
         this.id = id;
@@ -57,11 +59,11 @@ public class AccountsEntity {
         this.transactionsList = transactionsList;
     }
 
-    public void setNumber(Long number) {
-        this.balance = number;
+    public void setNumber(int number) {
+        this.number = number;
     }
 
-    public Long getNumber() {
+    public int getNumber() {
         return number;
     }
 }

@@ -4,5 +4,5 @@ public class CreatedAccountResponse {
 
     private String userName;
     private double initialBalance;
-    private Long accountNumber;
+    private int accountNumber;
 }

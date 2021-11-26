@@ -21,4 +21,8 @@ public class AccountsRepository {
     public Accounts createAccount(Accounts account) {
         return accountMapper.toAccount(accountsCrudRepository.save(accountMapper.toAccountEntity(account)));
     }
+
+    public Accounts consultBalance(int accountNumber) {
+        return accountMapper.toAccount(accountsCrudRepository.findAccountsEntitiesByNumber(accountNumber));
+    }
 }

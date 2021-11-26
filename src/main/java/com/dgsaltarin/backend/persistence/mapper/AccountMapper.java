@@ -19,6 +19,7 @@ public interface AccountMapper {
     Accounts toAccount(AccountsEntity accountsEntity);
 
     @InheritInverseConfiguration
+    @Mapping(target = "transactionsList", ignore = true)
     AccountsEntity toAccountEntity(Accounts account);
 
 }

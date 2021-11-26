@@ -8,5 +8,5 @@ public class Accounts {
     private Long id;
     private double balance;
     private Users user;
-    private Long number;
+    private int number;
 }
